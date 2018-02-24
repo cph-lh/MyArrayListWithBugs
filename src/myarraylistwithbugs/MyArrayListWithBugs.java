@@ -65,7 +65,7 @@ public class MyArrayListWithBugs {
         }
 // Shift elements down to fill indexed position
 // Start with first element
-        for (int i = index; i < nextFree - 1; i++) {
+        for (int i = index; i <= nextFree - 1; i++) {
             list[i] = list[i + 1];
         }
         nextFree--;

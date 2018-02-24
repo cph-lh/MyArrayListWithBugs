@@ -69,12 +69,11 @@ public class MyArrayListWithBugsTest {
         System.out.println("remove");
         Object o = new Object();
         MyArrayListWithBugs instance = new MyArrayListWithBugs();
-        for (int i = 0; i < 5; i++) {
-            instance.add(o);
-        }
-        int index = 4;
-        Object expResult = o;
-        Object result = instance.remove(index);
+        instance.add(o);
+        int index = 0;
+        instance.remove(index);
+        Object expResult = null;
+        Object result = instance.get(index);
         assertEquals(expResult, result);
     }
     
